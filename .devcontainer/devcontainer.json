@@ -1,0 +1,49 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}
+"""sql
+   LOAD DATA INFILE 'path/to/your/csvfile.csv'
+   INTO TABLE your_table
+   FIELDS TERMINATED BY ','
+   LINES TERMINATED BY '\n'
+   IGNORE 1 ROWS; -- Skip the header row if needed
+   """
+1. **Create a database**:
+   - Use a database management system such as MySQL, PostgreSQL, SQLite, or any other of your choice.
+   - Create a new database to hold the booking data.
+   - Design the database schema with appropriate tables to store the booking information (e.g., bookings, users, rooms, etc.).
+   - You can use a tool like MySQL Workbench to create the database and design the schema.
+
+2. **Connect to the database using a Python client**:
+   - Install a Python database connector library like `psycopg2` for PostgreSQL, `mysql-connector-python` for MySQL, or `sqlite3` for SQLite.
+   - Write Python code to establish a connection to the database.
+   - You need to provide the necessary connection details such as host, database name, username, and password.
+
+3. **Create procedures to react to changes in the data**:
+   - Implement procedures in Python to handle various operations like getting the maximum quantity, managing bookings, updating bookings, adding bookings, and canceling bookings.
+   - These procedures should interact with the database by executing SQL queries based on the required functionality.
+
+4. **Connect to the database using Tableau**:
+   - Install Tableau Desktop or Tableau Public on your machine.
+   - Connect Tableau to the database where you stored the booking data.
+   - Use Tableau's connection interface to establish a connection to your database.
+
+5. **Generate data reports using Tableau**:
+   - Create data visualizations and reports in Tableau based on the booking data.
+   - Utilize Tableau's features to create dashboards, charts, and graphs to present insights from the data.
+   - Share and publish your Tableau reports as needed.
+
+6. **GitHub repository**:
+   - Create a GitHub repository for your project.
+   - Include all your project files, including database scripts, Python scripts, ER diagram, and Tableau reports in the repository.
+   - Ensure that the repository is well-organized and includes a README file with instructions on how to run the project.
+
+7. **ER diagram**:
+   - Include an Entity-Relationship (ER) diagram in your GitHub repository.
+   - The ER diagram should show the connections between the tables in your database schema.
+
+8. **Implementation of procedures**:
+   - Ensure that the `GetMaxQuantity()`, `ManageBooking()`, `UpdateBooking()`, `AddBooking()`, and `CancelBooking()` procedures are properly implemented in your Python code.
+   - Test each procedure to ensure they work as expected and interact correctly with the database.
